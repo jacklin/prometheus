@@ -4,7 +4,7 @@
 # 
 set -x
 /bin/prometheus --config.file=/etc/prometheus/prometheus.yml \
---storage.tsdb.path=/prometheus \
+--storage.tsdb.path=/prometheus/${HOSTNAME} \
 --storage.tsdb.retention.time=${STORAGE_TSDB_RETENTION_TIME} \
 --storage.tsdb.retention.size=${STORAGE_TSDB_RETENTION_SIZE} \
 --storage.tsdb.wal-compression \
